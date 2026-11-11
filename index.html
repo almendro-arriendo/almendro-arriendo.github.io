@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#FAF7F2">
 <title>Apartamento en arriendo</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏠%3C/text%3E%3C/svg%3E">
-<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.className='portal rv-on'</script>
+<script>document.documentElement.className=matchMedia('(prefers-reduced-motion: reduce)').matches?'portal calm':'portal rv-on'</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=Syne:wght@600;700;800&display=swap">
 <style>
 :root{--bg:#FAF7F2;--bg2:#F0EBE2;--ink:#1C1813;--ink2:#5A544B;--mut:#857E73;--amber:#B3590F;--teal:#2E6B72;--line:rgba(28,24,19,.14);--disp:'Syne',system-ui,-apple-system,'Segoe UI',sans-serif;--sans:'Sora',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -37,7 +37,7 @@ h2{font:700 clamp(32px,5vw,68px)/1.02 var(--disp);letter-spacing:-.03em;margin:1
 .portal .stage{--p:0}
 .img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%;z-index:0;transform:scale(calc(1.18 - var(--p)*.18))}
 .wash{position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,var(--amber),var(--teal));mix-blend-mode:overlay;opacity:calc(var(--p)*.3)}
-.veil{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 50%,transparent 40%,rgba(250,247,242,.85) 100%)}
+.veil{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 50%,rgba(28,24,19,.3) 0%,rgba(28,24,19,.6) 100%)}
 .pn{position:absolute;top:0;bottom:0;width:52%;background:var(--bg2);z-index:3}
 .pn.l{left:0;transform:translateX(calc(var(--p)*-105%));border-right:1px solid var(--line)}
 .pn.r{right:0;transform:translateX(calc(var(--p)*105%));border-left:1px solid var(--line)}
@@ -45,11 +45,15 @@ h2{font:700 clamp(32px,5vw,68px)/1.02 var(--disp);letter-spacing:-.03em;margin:1
 .dot::after{content:"";position:absolute;inset:-7px;border-radius:50%;border:1px solid currentColor;opacity:.45}
 .dot.a{background:var(--amber);color:var(--amber);transform:translate(calc(-14px - var(--p)*38vw),calc(var(--p)*-34vh))}
 .dot.b{background:var(--teal);color:var(--teal);transform:translate(calc(14px + var(--p)*38vw),calc(var(--p)*34vh))}
-.mt{position:absolute;z-index:5}
+.mt{position:absolute;z-index:5;color:var(--ink2);color:color-mix(in srgb,var(--ink2),#FAF7F2 calc(var(--p)*100%))}
 .tl{top:calc(76px + env(safe-area-inset-top,0px));left:22px}.tr{top:calc(76px + env(safe-area-inset-top,0px));right:22px;text-align:right}
 .bl{bottom:calc(22px + env(safe-area-inset-bottom,0px));left:22px}.br{bottom:calc(22px + env(safe-area-inset-bottom,0px));right:22px;text-align:right}
-.title{position:absolute;inset:0;z-index:6;margin:0;display:flex;align-items:center;justify-content:center;gap:.26em;white-space:nowrap;pointer-events:none;font:800 clamp(24px,6vw,150px)/1 var(--disp);text-transform:uppercase;letter-spacing:calc(.03em - var(--p)*.08em);transform:scale(calc(1 + var(--p)*.08))}
+.title{position:absolute;inset:0;z-index:6;margin:0;display:flex;align-items:center;justify-content:center;gap:.26em;white-space:nowrap;pointer-events:none;color:var(--ink);color:color-mix(in srgb,var(--ink),#FAF7F2 calc(var(--p)*100%));font:800 clamp(24px,6vw,150px)/1 var(--disp);text-transform:uppercase;letter-spacing:calc(.03em - var(--p)*.08em);transform:scale(calc(1 + var(--p)*.08))}
 .t1{transform:translateX(calc(var(--p)*-18%))}.t2{transform:translateX(calc(var(--p)*18%))}
+.calm .img,.calm .title,.calm .t1,.calm .t2{transform:none}
+.calm .title{letter-spacing:.02em}
+.calm .dot{display:none}
+.calm .wash{opacity:.25}
 .fold{--s:.5;position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:28px;padding:120px 6vw;overflow:hidden}
 .fold>*:not(.orb){position:relative;z-index:1}
 .stmt{font:600 clamp(24px,3.6vw,52px)/1.18 var(--disp);letter-spacing:-.025em;max-width:22ch;margin:0}
@@ -199,7 +203,7 @@ td:first-child{font:600 clamp(20px,2.6vw,32px)/1.1 var(--disp);letter-spacing:-.
 <p class="lbl r rv">El conjunto</p>
 <h2 class="rv" style="--d:.1s">Zonas comunes.</h2>
 <div class="zg">
-<div class="rv"><span class="lbl">Servicios</span><ul><li>Portería</li><li>Administración</li><li>Bicicleteros</li></ul></div>
+<div class="rv"><span class="lbl">Servicios</span><ul><li>Portería</li><li>Administración</li><li>Bicicleteros</li><li>Parqueadero comunal</li></ul></div>
 <div class="rv"><span class="lbl">Para compartir</span><ul><li>Salón social</li><li>Sala múltiple</li><li>Zona BBQ</li></ul></div>
 <div class="rv"><span class="lbl">Al aire libre</span><ul><li>Terraza comunal</li><li>Zonas verdes</li></ul></div>
 <div class="rv"><span class="lbl">Deporte y bienestar</span><ul><li>Cancha múltiple no reglamentaria</li><li>Zona biosaludable</li><li>Zona de equilibrio</li><li>Juegos de destreza</li></ul></div>
@@ -223,10 +227,10 @@ var $=function(s){return document.querySelector(s)},$$=function(s){return [].sli
 reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,
 cl=function(v,a,b){return Math.min(b,Math.max(a,v))};
 var hero=$('.hero'),stage=$('.stage'),fold=$('.fold'),ticking=false;
-function frame(){ticking=false;if(reduce)return;
+function frame(){ticking=false;
 var r=hero.getBoundingClientRect(),rg=r.height-innerHeight,p=rg>0?cl(-r.top/rg/.85,0,1):1;
 stage.style.setProperty('--p',p.toFixed(4));
-var f=fold.getBoundingClientRect();fold.style.setProperty('--s',cl((innerHeight-f.top)/(innerHeight+f.height),0,1).toFixed(4))}
+if(reduce)return;var f=fold.getBoundingClientRect();fold.style.setProperty('--s',cl((innerHeight-f.top)/(innerHeight+f.height),0,1).toFixed(4))}
 function req(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
 addEventListener('scroll',req,{passive:true});addEventListener('resize',req);frame();
 
